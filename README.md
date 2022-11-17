@@ -12,6 +12,7 @@
       <form action="" onsubmit="return validation()">
         <label>user name: </label>
         <input type="text" name="user" id="user">
+        <span id='usererror'></span>
          <label>password: </label>
         <input type="text" name="user" id="user">
          <label>email: </label>
@@ -26,6 +27,12 @@
     </div>
     <script>
         function validation(){
+          var user=document.getEelementById('user').value;
+         
+          if(user==""){
+        document.getElementById('usererror').innerHTML="** please fill the user name field.";
+      
+      }
         }
       
       
